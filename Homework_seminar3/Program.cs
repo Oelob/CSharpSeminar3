@@ -42,27 +42,52 @@ A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
 
-double GetDistance(int coord1_1, int coord1_2,int coord1_3,int coord2_1,int coord2_2,int coord2_3)
-{
+// double GetDistance(int coord1_1, int coord1_2,int coord1_3,int coord2_1,int coord2_2,int coord2_3)
+// {
    
-    double result = Math.Sqrt(Math.Pow((coord2_1 - coord1_1), 2) + Math.Pow((coord2_2 - coord1_2), 2) + Math.Pow((coord2_3 - coord1_3), 2));
-    return result;
+//     double result = Math.Sqrt(Math.Pow((coord2_1 - coord1_1), 2) + Math.Pow((coord2_2 - coord1_2), 2) + Math.Pow((coord2_3 - coord1_3), 2));
+//     return result;
 
+// }
+
+// Console.WriteLine("Kоординаты точки А \n Введите X: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Y: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Z: ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("Kоординаты точки B \n Введите X: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Y: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Z: ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// double distance = GetDistance(x1, y1, z1, x2, y2, z2);
+// Console.Write($"Расстояние между точками А и В " + distance);
+
+/*
+Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+3 -> 1, 8, 27
+5 -> 1, 8, 27, 64, 125
+*/
+
+
+
+void GetFiguresCube(int figure)
+{
+    int count = 1;
+    while (count <= figure)
+    {
+        int cubes = (int)Math.Pow(count, 3);
+        Console.Write(cubes + " " );
+        count++;
+        
+    }
 }
 
-Console.WriteLine("Kоординаты точки А \n Введите X: ");
-int x1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите Y: ");
-int y1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите Z: ");
-int z1 = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Kоординаты точки B \n Введите X: ");
-int x2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите Y: ");
-int y2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите Z: ");
-int z2 = Convert.ToInt32(Console.ReadLine());
-
-double distance = GetDistance(x1, y1, z1, x2, y2, z2);
-Console.Write($"Расстояние между точками А и В " + distance);
+Console.WriteLine("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+GetFiguresCube(n);
